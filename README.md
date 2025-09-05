@@ -14,13 +14,15 @@ O site se inspira no brechó **[Brechó Gertrudez](https://www.brechogertrudez.c
 
 ## 📂 — 𝕰𝖘𝖙𝖗𝖚𝖙𝖚𝖗𝖆 𝖉𝖔 𝕻𝖗𝖔𝖏𝖊𝖙𝖔
 
-- **index.html** → Página inicial  
-- **produtos.html** → Lista de produtos  
-- **cadastro.html** → Cadastro de novos usuários  
-- **login.html** → Página de login  
-- **contato.html** → Formulário de contato  
-- **emdev.html** → Página placeholder  
-- **style.css** → Estilização principal  
+- **index.html** → Página inicial
+- **style.css** → Estilização de TODO o site
+- **/pages** → Paginas do site
+   - **produtos.html** → Lista de produtos  
+   - **cadastro.html** → Cadastro de novos usuários  
+   - **login.html** → Página de login  
+   - **contato.html** → Formulário de contato  
+   - **emdev.html** → Página placeholder  
+   - **style.css** → Estilização principal  
 - **/img** → Imagens do site
    - **brecho_creks.png** → Logo do site (feito por IA e usando a logo da GOLF le FLEUR* como inspiração)
    - **preview_creks.png** → Print de toda a página inicial.
