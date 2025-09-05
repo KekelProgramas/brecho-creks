@@ -36,9 +36,7 @@ O site se inspira no brechó **[Brechó Gertrudez](https://www.brechogertrudez.c
 ---
 
 ## 💻 — 𝕿𝖊𝖈𝖓𝖔𝖑𝖔𝖌𝖎𝖆𝖘 𝖀𝖙𝖎𝖑𝖎𝖟𝖆𝖉𝖆𝖘
-
-- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ---
 
