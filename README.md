@@ -17,10 +17,10 @@ O site se inspira no brechó **[Brechó Gertrudez](https://www.brechogertrudez.c
 - **index.html** → Página inicial
 - **style.css** → Estilização de TODO o site
 - **/pages** → Paginas do site
-   - **produtos.html** → Lista de produtos  
+   - **Produtos.html** → Lista de Produtos  
    - **cadastro.html** → Cadastro de novos usuários  
    - **login.html** → Página de login  
-   - **contato.html** → Formulário de contato  
+   - **Contato.html** → Formulário de Contato  
    - **emdev.html** → Página placeholder  
    - **style.css** → Estilização principal  
 - **/img** → Imagens do site
