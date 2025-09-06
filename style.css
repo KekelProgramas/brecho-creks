@@ -287,7 +287,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .produto_img {
   display: flex;
   width: 100%;
-  height: 300px;
+  height: 67vh; 
   align-items: center;
   justify-content: center;
   color: white;
@@ -297,23 +297,14 @@ input[type="search"]::-webkit-search-results-decoration {
   letter-spacing: 1px;
   font-family: var(--fonte-secundaria);
   border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden;
 }
 
-.produto:nth-child(1) .produto_img { background: var(--cor-secundaria); }
-.produto:nth-child(2) .produto_img { background: var(--cor-acento1); }
-.produto:nth-child(3) .produto_img { background: var(--cor-acento2); }
-.produto:nth-child(4) .produto_img { background: var(--cor-acento3); }
-.produto:nth-child(5) .produto_img { background: var(--cor-acento1); }
-.produto:nth-child(6) .produto_img { background: var(--cor-acento2); }
-.produto:nth-child(7) .produto_img { background: var(--cor-secundaria); }
-.produto:nth-child(8) .produto_img { background: var(--cor-acento1); }
-.produto:nth-child(9) .produto_img { background: var(--cor-acento2); }
-.produto:nth-child(10) .produto_img { background: var(--cor-acento3); }
-.produto:nth-child(11) .produto_img { background: var(--cor-acento1); }
-.produto:nth-child(12) .produto_img { background: var(--cor-acento2); }
-.produto:nth-child(13) .produto_img { background: var(--cor-secundaria); }
-.produto:nth-child(14) .produto_img { background: var(--cor-acento1); }
-.produto:nth-child(15) .produto_img { background: var(--cor-acento2); }
+.produto_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .produto {
   width: 100%;
@@ -605,6 +596,75 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: var(--cor-fundo2);
 }
 
+/* ⋆.ೃ࿔*:･ 𝔠𝔞𝔯𝔯𝔢𝔤𝔞𝔪𝔢𝔫𝔱𝔬 */
+
+.carregamento_main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  font-family: var(--fonte-secundaria);
+}
+
+.carregamento_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  box-shadow: var(--sombra);
+  border-radius: var(--radius);
+  padding: 20px;
+  background-color: var(--cor-fundo2);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin:15px auto;
+  position: relative;
+  color: var(--cor-fundo2);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  left: 50%;
+  transform: scale(0.5) translate(0, 0);
+  background-color: #FFF;
+  border-radius: 50%;
+  animation: animloader 1s infinite ease-in-out;
+}
+.loader::before {
+  background-color: var(--cor-secundaria);
+  transform: scale(0.5) translate(-48px, -48px);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes animloader {
+    50% {
+      transform: scale(1) translate(-50%, -50%);
+}
+}
+
+
+
 /* ⋆.ೃ࿔*:･ 𝕽𝖔𝖉𝖆𝖕é */
 .rodape {
   background-color: var(--cor-rodape-bg);
@@ -867,8 +927,6 @@ input[type="search"]::-webkit-search-results-decoration {
   .login_icone {
     visibility: hidden;
   }
-
-
 }
 
 
