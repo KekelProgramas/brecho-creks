@@ -11,4 +11,5 @@ async function loadComponent(elementId, componentPath) {
 document.addEventListener('DOMContentLoaded', () => {
   loadComponent('header-component', '/components/header.html');
   loadComponent('footer-component', '/components/footer.html');
+  loadComponent('emdev-component', '/components/emdev.html');
 });
