@@ -44,11 +44,11 @@ O site se inspira no brechó **[Brechó Gertrudez](https://www.brechogertrudez.c
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/brecho_dos_creks.git
+   git clone https://github.com/seu-usuario/brecho-creks.git
    ```
 2. Acesse a pasta referente ao repositório:
    ```bash
-   cd brecho_dos_creks
+   cd brecho-creks
    ```
 3. Abra o arquivo `index.html` no seu navegador.
 4. Aproveite :)
