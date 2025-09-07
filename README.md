@@ -36,7 +36,7 @@ O site se inspira no brechó **[Brechó Gertrudez](https://www.brechogertrudez.c
 ---
 
 ## 💻 — 𝕿𝖊𝖈𝖓𝖔𝖑𝖔𝖌𝖎𝖆𝖘 𝖀𝖙𝖎𝖑𝖎𝖟𝖆𝖉𝖆𝖘
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ---
 
@@ -44,11 +44,11 @@ O site se inspira no brechó **[Brechó Gertrudez](https://www.brechogertrudez.c
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/brecho_dos_creks.git
+   git clone https://github.com/seu-usuario/brecho-creks.git
    ```
 2. Acesse a pasta referente ao repositório:
    ```bash
-   cd brecho_dos_creks
+   cd brecho-creks
    ```
 3. Abra o arquivo `index.html` no seu navegador.
 4. Aproveite :)
