@@ -6,7 +6,7 @@ Um site criado para desenvolver habilidades de **front-end** que simula um brech
 
 ## 👀 — 𝕻𝖗𝖊𝖛𝖎𝖊𝖜 𝖉𝖔 𝕾𝖎𝖙𝖊
 
-![Preview da Index](img/preview_creks.png)
+![Preview da Index](img/preview_creks.webp)
 
 O site se inspira no brechó **[Brechó Gertrudez](https://www.brechogertrudez.com.br/)** e na marca de roupa **[Golf Le Fleur](https://golflefleur.com/?srsltid=AfmBOopc7-xqT_fAwvzVeUFdTqbgb5Kpybf0QELhgu4IWsc4ao6dJ3_6)**, isto é, ***TODA*** propriedade intelectual relacionada a design pertence a essas duas empresas. ***O site serve como uma homenagem à criatividade dos designers e idealizadores envolvidos nestes projetos***.
 
