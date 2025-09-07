@@ -261,12 +261,47 @@ input[type="search"]::-webkit-search-results-decoration {
   transform: translateY(-2px);
 }
 
+.categorias a {
+  text-decoration: none;
+  transition: var(--transicao);
+  border-radius: var(--radius);
+  position: relative;
+}
+
 /* ⋆.ೃ࿔*:･ 𝕻𝖗𝖔𝖉𝖚𝖙𝖔𝖘 */
 .produtos_secao {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+}
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.pagina-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--cor-secundaria);
+  background: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+}
+
+.pagina-btn:hover {
+  background: var(--cor-secundaria);
+  color: white;
+}
+
+.pagina-btn.ativo {
+  background: var(--cor-secundaria);
+  color: white;
 }
 
 .produto_titulo {

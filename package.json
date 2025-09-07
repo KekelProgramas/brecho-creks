@@ -1,0 +1,15 @@
+{
+  "name": "brecho_creks",
+  "version": "1.0.0",
+  "description": "Um site criado para desenvolver habilidades de **front-end** que simula um brechó online de roupas.",
+  "main": "convert-to-webp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webp-converter": "^2.3.3"
+  }
+}

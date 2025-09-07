@@ -1,0 +1,298 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Bolsa de Ombro Croché \"Skull Party\"",
+      "valor": 57.90,
+      "categoria": "acessorios",
+      "imagem": "/products/produto1.webp"
+    },
+    {
+      "id": 2,
+      "nome": "Bolsa de Ombro Croché \"Estrela & Laços\"",
+      "valor": 37.50,
+      "categoria": "acessorios",
+      "imagem": "/products/produto2.webp"
+    },
+    {
+      "id": 3,
+      "nome": "Bolsa de Ombro Croché \"Botões",
+      "valor": 44.80,
+      "categoria": "acessorios",
+      "imagem": "/products/produto3.webp"
+    },
+    {
+      "id": 4,
+      "nome": "Bolsa Croché \"Batman\"",
+      "valor": 0,
+      "categoria": "acessorios",
+      "imagem": "/products/produto4.webp"
+    },
+    {
+      "id": 5,
+      "nome": "Baggy Rasgado \"Trash\"",
+      "valor": 89.90,
+      "categoria": "bottoms",
+      "imagem": "/products/produto5.webp"
+    },
+    {
+      "id": 6,
+      "nome": "Boina Jeans \"Caio Gobbi\"",
+      "valor": 21.40,
+      "categoria": "acessorios",
+      "imagem": "/products/produto6.webp"
+    },
+    {
+      "id": 7,
+      "nome": "Touca \"SkBUUUUUUUHll\"",
+      "valor": 13.30,
+      "categoria": "acessorios",
+      "imagem": "/products/produto7.webp"
+    },
+    {
+      "id": 8,
+      "nome": "Boxy \"FUCK OFF\"",
+      "valor": 37.00,
+      "categoria": "tops",
+      "imagem": "/products/produto8.webp"
+    },
+    {
+      "id": 9,
+      "nome": "BB Belt Tradicional",
+      "valor": 89.30,
+      "categoria": "acessorios",
+      "imagem": "/products/produto9.webp"
+    },
+    {
+      "id": 10,
+      "nome": "Cinto Spike Tradicional",
+      "valor": 27.90,
+      "categoria": "acessorios",
+      "imagem": "/products/produto10.webp"
+    },
+    {
+      "id": 11,
+      "nome": "T-shirt \"Skull\"",
+      "valor": 14.80,
+      "categoria": "tops",
+      "imagem": "/products/produto11.webp"
+    },
+    {
+      "id": 12,
+      "nome": "Saia Jeans Preta",
+      "valor": 39.80,
+      "categoria": "bottoms",
+      "imagem": "/products/produto12.webp"
+    },
+    {
+      "id": 13,
+      "nome": "T-shirt \"Stay Punk\"",
+      "valor": 23.00,
+      "categoria": "tops",
+      "imagem": "/products/produto13.webp"
+    },
+    {
+      "id": 14,
+      "nome": "Saia Jeans Babadinhos Levi's",
+      "valor": 49.90,
+      "categoria": "bottoms",
+      "imagem": "/products/produto14.webp"
+    },
+    {
+      "id": 15,
+      "nome": "Saia Jeans Caio Gobbi Jeans",
+      "valor": 60.50,
+      "categoria": "bottoms",
+      "imagem": "/products/produto15.webp"
+    },
+    {
+      "id": 16,
+      "nome": "Saia Jeans Leve \"Pretty Girl\"",
+      "valor": 58.00,
+      "categoria": "bottoms",
+      "imagem": "/products/produto16.webp"
+    },
+    {
+      "id": 17,
+      "nome": "Short Jeans Grunge Light",
+      "valor": 22.90,
+      "categoria": "bottoms",
+      "imagem": "/products/produto17.webp"
+    },
+    {
+      "id": 18,
+      "nome": "Mini Short \"The GOLD\"",
+      "valor": 34.80,
+      "categoria": "bottoms",
+      "imagem": "/products/produto18.webp"
+    },
+    {
+      "id": 19,
+      "nome": "Short Jeans \"Skull Girl\"",
+      "valor": 67.50,
+      "categoria": "bottoms",
+      "imagem": "/products/produto19.webp"
+    },
+    {
+      "id": 20,
+      "nome": "Short Jeans Tradicional",
+      "valor": 22.90,
+      "categoria": "bottoms",
+      "imagem": "/products/produto20.webp"
+    },
+    {
+      "id": 21,
+      "nome": "Short Jeans \"Church\"",
+      "valor": 66.90,
+      "categoria": "bottoms",
+      "imagem": "/products/produto21.webp"
+    },
+    {
+      "id": 22,
+      "nome": "Short Jeans Tradicional Preto",
+      "valor": 33.90,
+      "categoria": "bottoms",
+      "imagem": "/products/produto22.webp"
+    },
+    {
+      "id": 24,
+      "nome": "Bermuda Jeans Lavagem Clara",
+      "valor": 60.70,
+      "categoria": "bottoms",
+      "imagem": "/products/produto24.webp"
+    },
+    {
+      "id": 23,
+      "nome": "Short Jeans \"Monster High\"",
+      "valor": 0,
+      "categoria": "",
+      "imagem": "/products/produto23.webp"
+    },
+    {
+      "id": 25,
+      "nome": "T-shirt gatinho",
+      "valor": 12.20,
+      "categoria": "tops",
+      "imagem": "/products/produto25.webp"
+    },
+    {
+      "id": 26,
+      "nome": "T-shirt \"Brat\"",
+      "valor": 16.50,
+      "categoria": "tops",
+      "imagem": "/products/produto26.webp"
+    },
+    {
+      "id": 27,
+      "nome": "Conjunto Regata e T-shirt \"Guns n' Roses\"",
+      "valor": 30.90,
+      "categoria": "tops",
+      "imagem": "/products/produto27.webp"
+    },
+    {
+      "id": 28,
+      "nome": "Top Rendado com Bojo",
+      "valor": 18.90,
+      "categoria": "tops",
+      "imagem": "/products/produto28.webp"
+    },
+    {
+      "id": 29,
+      "nome": "Sueter Maison Margiela \"Trashed\"",
+      "valor": 109.0,
+      "categoria": "tops",
+      "imagem": "/products/produto29.webp"
+    },
+    {
+      "id": 30,
+      "nome": "Cropped \"STAAARW\"",
+      "valor": 23.00,
+      "categoria": "tops",
+      "imagem": "/products/produto30.webp"
+    },
+    {
+      "id": 31,
+      "nome": "Sueter Tradicional",
+      "valor": 75.0,
+      "categoria": "tops",
+      "imagem": "/products/produto31.webp"
+    },
+    {
+      "id": 32,
+      "nome": "Sueter Listrado",
+      "valor": 79.90,
+      "categoria": "tops",
+      "imagem": "/products/produto32.webp"
+    },
+    {
+      "id": 33,
+      "nome": "Oversized \"I <3 MY GIRLFRIEND\"",
+      "valor": 49.90,
+      "categoria": "tops",
+      "imagem": "/products/produto33.webp"
+    },
+    {
+      "id": 34,
+      "nome": "T-shirt \"Batman Blue\"",
+      "valor": 29.90,
+      "categoria": "tops",
+      "imagem": "/products/produto34.webp"
+    },
+    {
+      "id": 35,
+      "nome": "Sueter Listrado \"Freddy Krueger\"",
+      "valor": 90.0,
+      "categoria": "tops",
+      "imagem": "/products/produto35.webp"
+    },
+    {
+      "id": 36,
+      "nome": "Regata Grunge Sex Pistols",
+      "valor": 16.70,
+      "categoria": "tops",
+      "imagem": "/products/produto36.webp"
+    },
+    {
+      "id": 37,
+      "nome": "Oversized \"Star Girl\"",
+      "valor": 59.90,
+      "categoria": "tops",
+      "imagem": "/products/produto37.webp"
+    },
+    {
+      "id": 38,
+      "nome": "T-shirt \"SK8 SKULL\"",
+      "valor": 19.90,
+      "categoria": "tops",
+      "imagem": "/products/produto38.webp"
+    },
+    {
+      "id": 39,
+      "nome": "T-shirt \"SK8 CRUZ\"",
+      "valor": 19.90,
+      "categoria": "tops",
+      "imagem": "/products/produto39.webp"
+    },
+    {
+      "id": 40,
+      "nome": "Bermuda Jeans Lavagem Escura",
+      "valor": 89.90,
+      "categoria": "bottoms",
+      "imagem": "/products/produto40.webp"
+    },
+    {
+      "id": 41,
+      "nome": "Baggy Jeans \"Skull Jeans\"",
+      "valor": 110.9,
+      "categoria": "bottoms",
+      "imagem": "/products/produto41.webp"
+    },
+    {
+      "id": 42,
+      "nome": "BB Belt Animal Print Azul",
+      "valor": 60.9,
+      "categoria": "acessorios",
+      "imagem": "/products/produto42.webp"
+    }
+  ]
+}

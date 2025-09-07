@@ -6,28 +6,15 @@
     <title>Brechó dos Creks</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/brecho_creks.png">
+    <script src="/js/componentes.js"></script>
+    <script src="/js/produtos.js"></script>
   </head>
   <body>
     <div id="top_cabeca">
       <p>Use o cupom "kaka20" em todos nossos produtos 🦶</p>
     </div>
     
-    <div class="cabecao">
-      <header class="cabeca">
-        <div id="pesquisa_barra">
-          <input type="search" id="pesquisa" placeholder="Buscar" />
-          <span id="pesquisa_img"><img src="icons/pesquisa.svg" alt="" /></span>
-        </div>
-          <a href="index.html"><img src="img/brecho_creks.png" id="logo" /></a>
-          <p id="lc"><a href="pages/cadastro.html">Cadastre-se</a> — <a href="pages/login.html">Entrar</a></p>
-      </header>
-      <ul class="abas">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/Produtos.html">Produtos</a></li>
-        <li><a href="pages/Contato.html">Contato</a></li>
-        <li><a href="https://github.com/KekelProgramas/brecho_dos_creks">repositório</a></li>
-      </ul>
-    </div>
+    <div id="header-component"></div>
     <div class="card">
       <img class="img_promocional" src="img/img_promocional.webp" alt="" />
       <div class="bolinhas">
@@ -36,63 +23,15 @@
       </div>
     </div>
     <div class="categorias" id="categorias">
-      <div class="categoria">Tops</div>
-      <div class="categoria">Bottoms</div>
-      <div class="categoria">Peças únicas</div>
-      <div class="categoria">Acessórios</div>
+      <a href="/pages/category/tops.html" class="categoria">Tops</a>
+      <a href="/pages/category/bottoms.html" class="categoria">Bottoms</a>
+      <a href="/pages/category/pecasu.html" class="categoria">Peças únicas</a>
+      <a href="/pages/category/acessorios.html" class="categoria">acessorios</a>
     </div>
 
     <section class="produtos_secao">
       <h2 class="produto_titulo">Populares 💕</h2>
       <div class="produto_container">
-        <div class="produto">
-          <div class="produto_img"><img src="/products/bottom1.jpg" alt="produto1"></div>
-          <div class="produto_info">
-            <h4 class="produto_nome">Baggy Jeans Rasgados</h4>
-            <p class="produto_valor">R$ 96,70</p>
-            <button class="botao">COMPRAR</button>
-          </div>
-        </div>
-        <div class="produto">
-          <div class="produto_img"><img src="/products/bottom2.jpg" alt=""></div>
-          <div class="produto_info">
-            <h4 class="produto_nome">BB Belt Animal Print</h4>
-            <p class="produto_valor">R$ 76,40</p>
-            <button class="botao">COMPRAR</button>
-          </div>
-        </div> 
-        <div class="produto">
-          <div class="produto_img"><img src="/products/top1.jpg" alt=""></div>
-          <div class="produto_info">
-            <h4 class="produto_nome">Camiseta de Costelas</h4>
-            <p class="produto_valor">R$ 26,79</p>
-            <button class="botao">COMPRAR</button>
-          </div>
-        </div>
-        <div class="produto">
-          <div class="produto_img"><img src="/products/top3.jpg" alt=""></div>
-          <div class="produto_info">
-            <h4 class="produto_nome">T-shirt Stay Punk</h4>
-            <p class="produto_valor">R$ 15,90</p>
-            <button class="botao">COMPRAR</button>
-          </div>
-        </div>
-        <div class="produto">
-          <div class="produto_img"><img src="/products/top4.jpg" alt=""></div>
-          <div class="produto_info">
-            <h4 class="produto_nome">Camiseta Boxy FUCK OFF</h4>
-            <p class="produto_valor">R$ 28,10</p>
-            <button class="botao">COMPRAR</button>
-          </div>
-        </div>
-        <div class="produto">
-          <div class="produto_img"><img src="/products/top2.jpg" alt=""></div>
-          <div class="produto_info">
-            <h4 class="produto_nome">Camiseta I <3 VAMPIRES</h4>
-            <p class="produto_valor">R$ 34,66</p>
-            <button class="botao">COMPRAR</button>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -104,10 +43,7 @@
         </p>
       </div>
     </section>
-    <footer class="rodape">
-      <p>
-        © 2025 <strong>Brechó Dos Creks</strong>. Todos os direitos reservados.
-      </p>
-    </footer>
+    <div id="footer-component"></div>
+    <script src="js/produtos.js"></script>
   </body>
 </html>
