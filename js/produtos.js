@@ -1,9 +1,9 @@
-const PRODUTOS_POR_PAGINA = 20; // quantidade por página
+const PRODUTOS_POR_PAGINA = 10;
 let paginaAtual = 1;
 let totalPaginas = 1;
 let produtosFiltrados = [];
 
-// Função para formatar preço
+// ⋆.ೃ࿔*:･ 𝕻𝖗𝖔𝖉𝖚𝖙𝖔𝖘
 function formatarPreco(valor) {
   return valor.toLocaleString("pt-BR", {
     style: "currency",
@@ -11,7 +11,6 @@ function formatarPreco(valor) {
   });
 }
 
-// Cria o HTML de cada produto
 function criarProdutoHTML(produto) {
   return `
     <div class="produto">
@@ -27,7 +26,7 @@ function criarProdutoHTML(produto) {
   `;
 }
 
-// ================= PAGINAÇÃO =================
+// ⋆.ೃ࿔*:･ 𝕻𝖆𝖌𝖎𝖓𝖆𝖈̧𝖆̃𝖔
 function criarPaginacao() {
   const paginacao = document.querySelector(".paginacao");
   if (!paginacao) return;
@@ -65,7 +64,7 @@ function mostrarProdutosPagina() {
   container.innerHTML = produtosPagina.map(criarProdutoHTML).join("");
 }
 
-// ================= CARREGAR PRODUTOS =================
+// ⋆.ೃ࿔*:･ 𝕮𝖆𝖗𝖗𝖊𝖌𝖆𝖗 𝕻𝖗𝖔𝖉𝖚𝖙𝖔𝖘
 async function carregarProdutos(categoria = null) {
   try {
     const response = await fetch("/js/produtos.json");
@@ -87,7 +86,7 @@ async function carregarProdutos(categoria = null) {
   }
 }
 
-// ================= DESTAQUES PARA INDEX =================
+// ⋆.ೃ࿔*:･ 𝕯𝖊𝖘𝖙𝖆𝖖𝖚𝖊𝖘 𝖕𝖆𝖗𝖆 𝕴𝖓𝖉𝖊𝖝
 async function carregarProdutosDestaque() {
   try {
     const response = await fetch("/js/produtos.json");
@@ -107,12 +106,11 @@ async function carregarProdutosDestaque() {
   }
 }
 
-// ================= DOM CONTENT LOADED =================
+// ⋆.ೃ࿔*:･ 𝕯𝖔𝖒 𝖈𝖔𝖓𝖙𝖊𝖓𝖙 𝖑𝖔𝖆𝖉𝖊𝖉
 document.addEventListener("DOMContentLoaded", () => {
   const path = window.location.pathname;
 
   if (path.includes("/pages/category/")) {
-    // pega o nome da categoria do arquivo
     const categoria = path.split("/").pop().replace(".html", "");
     carregarProdutos(categoria);
   } else if (path.includes("/pages/produtos.html")) {
