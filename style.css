@@ -402,7 +402,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex; 
   align-items: center;
   gap: 40px;
-  padding: 2em; 
+  padding: 2em 0.2em; 
 }
 
 .sobrenos_img {
