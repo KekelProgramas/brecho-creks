@@ -13,17 +13,173 @@ function formatarPreco(valor) {
 
 function criarProdutoHTML(produto) {
   return `
-    <div class="produto">
+    <div class="produto" onclick="irParaProduto(${produto.id})">
       <div class="produto_img">
         <img src="${produto.imagem}" alt="${produto.nome}" loading="lazy">
       </div>
       <div class="produto_info">
         <h4 class="produto_nome">${produto.nome}</h4>
         <p class="produto_valor">${formatarPreco(produto.valor)}</p>
-        <button class="botao">COMPRAR</button>
+        <button class="botao" onclick="event.stopPropagation(); irParaProduto(${produto.id})">COMPRAR</button>
       </div>
     </div>
   `;
+}
+
+// ⋆.ೃ࿔*:･ 𝔑𝔞𝔳𝔢𝔤𝔞çã𝔬 𝔞𝔬 𝔭𝔯𝔬𝔡𝔲𝔱𝔬
+function irParaProduto(id) {
+  window.location.href = `/pages/produto.html?id=${id}`;
+}
+
+// ⋆.ೃ࿔*:･ 𝔏𝔬𝔞𝔡 𝔞 𝔭á𝔤𝔦𝔫𝔞 𝔡𝔬 𝔭𝔯𝔬𝔡𝔲𝔱𝔬
+async function carregarPaginaProduto() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const produtoId = parseInt(urlParams.get('id'));
+  
+  if (!produtoId) {
+    console.error('ID do produto não encontrado na URL');
+    return;
+  }
+
+  try {
+    const response = await fetch('/js/produtos.json');
+    const data = await response.json();
+    const produto = data.produtos.find(p => p.id === produtoId);
+    
+    if (!produto) {
+      console.error('Produto não encontrado');
+      return;
+    }
+
+    // Atualizar título da página
+    document.title = `Brechó Dos Creks - ${produto.nome}`;
+
+    // Atualizar imagem do produto
+    const imgProduto = document.querySelector('.page_produto_img img');
+    if (imgProduto) {
+      imgProduto.src = produto.imagem;
+      imgProduto.alt = produto.nome;
+    }
+
+    // Atualizar nome do produto
+    const nomeProduto = document.querySelector('.page_produto_nome');
+    if (nomeProduto) {
+      nomeProduto.textContent = produto.nome;
+    }
+
+    // Atualizar código do produto
+    const idProduto = document.querySelector('.page_produto_id');
+    if (idProduto) {
+      idProduto.textContent = `Codigo: ${produto.id}`;
+    }
+
+    // Atualizar preços
+    const precoPromocional = document.querySelector('.page_produto_preco_promo');
+    const preco = document.querySelector('.page_produto_preco');
+    const parcelas = document.querySelector('.page_produto_parcelas');
+    
+    if (preco) {
+      preco.textContent = formatarPreco(produto.valor);
+    }
+    
+    // Simular preço promocional (15% de desconto)
+    if (precoPromocional) {
+      const precoOriginal = produto.valor * 1.15;
+      precoPromocional.textContent = formatarPreco(precoOriginal);
+    }
+    
+    // Calcular parcelas
+    if (parcelas) {
+      const valorParcela = produto.valor / 3;
+      parcelas.textContent = `3x de ${formatarPreco(valorParcela)}* sem juros`;
+    }
+
+    // Atualizar cores disponíveis
+    atualizarCores(produto.cores);
+
+    // Atualizar tamanhos disponíveis
+    atualizarTamanhos(produto.tamanhos);
+
+    // Adicionar descrição básica
+    adicionarDescricao(produto);
+
+  } catch (error) {
+    console.error('Erro ao carregar produto:', error);
+  }
+}
+
+function atualizarCores(cores) {
+  const coresContainer = document.querySelector('.cores_produto');
+  if (!coresContainer || !cores) return;
+
+  coresContainer.innerHTML = '';
+  
+  cores.forEach((cor, index) => {
+    const radioId = `cor${index + 1}`;
+    const isChecked = index === 0 ? 'checked' : '';
+    
+    coresContainer.innerHTML += `
+      <input type="radio" name="cor" id="${radioId}" ${isChecked}>
+      <label for="${radioId}" class="cor" style="--cor:${cor};" title="Cor ${index + 1}"></label>
+    `;
+  });
+}
+
+function atualizarTamanhos(tamanhos) {
+  const tamanhosContainer = document.querySelector('.page_produtos_tamanho');
+  if (!tamanhosContainer || !tamanhos) return;
+
+  // Todos os tamanhos possíveis
+  const todosTamanhos = ['PP', 'P', 'M', 'G', 'GG'];
+  tamanhosContainer.innerHTML = '';
+
+  todosTamanhos.forEach((tamanho, index) => {
+    const radioId = `tam${tamanho}`;
+    const disponivel = tamanhos.includes(tamanho) || tamanhos.includes('tamanho único');
+    const isChecked = disponivel && index === tamanhos.findIndex(t => todosTamanhos.includes(t)) ? 'checked' : '';
+    const disabled = !disponivel ? 'disabled' : '';
+    const classeIndisponivel = !disponivel ? 'indisponivel' : '';
+
+    tamanhosContainer.innerHTML += `
+      <input type="radio" name="tamanho" id="${radioId}" ${disabled} ${isChecked}>
+      <label for="${radioId}" class="${classeIndisponivel}">${tamanho}</label>
+    `;
+  });
+
+  // Se for tamanho único, mostrar apenas um tamanho
+  if (tamanhos.includes('tamanho único')) {
+    tamanhosContainer.innerHTML = `
+      <input type="radio" name="tamanho" id="tamUnico" checked>
+      <label for="tamUnico">Único</label>
+    `;
+  }
+}
+
+function adicionarDescricao(produto) {
+  const descricaoContainer = document.querySelector('.produto_desc_conteudo p');
+  if (!descricaoContainer) return;
+
+  // Gerar descrição baseada na categoria e nome
+  let descricao = '';
+  
+  switch (produto.categoria) {
+    case 'tops':
+      descricao = `${produto.nome} - Peça versátil e estilosa, perfeita para compor looks únicos. Confeccionada com materiais de qualidade, oferece conforto e durabilidade. Ideal para quem busca expressar sua personalidade através da moda.`;
+      break;
+    case 'bottoms':
+      descricao = `${produto.nome} - Peça essencial para o seu guarda-roupa. Design moderno e confortável, adequada para diversas ocasiões. Combina estilo e praticidade em uma única peça.`;
+      break;
+    case 'acessorios':
+      descricao = `${produto.nome} - Acessório que adiciona personalidade ao seu visual. Produto cuidadosamente selecionado para complementar seu estilo único. Perfeito para quem valoriza os detalhes.`;
+      break;
+    case 'pecasu':
+      descricao = `${produto.nome} - Peça única e exclusiva, impossível de encontrar em outro lugar. Design diferenciado que destaca sua individualidade e bom gosto.`;
+      break;
+    default:
+      descricao = `${produto.nome} - Produto selecionado especialmente para nossos clientes que buscam qualidade e estilo. Uma peça que fará a diferença no seu visual.`;
+  }
+  
+  descricaoContainer.textContent = descricao;
 }
 
 // ⋆.ೃ࿔*:･ 𝕻𝖆𝖌𝖎𝖓𝖆𝖈̧𝖆̃𝖔
@@ -106,11 +262,99 @@ async function carregarProdutosDestaque() {
   }
 }
 
-// ⋆.ೃ࿔*:･ 𝕯𝖔𝖒 𝖈𝖔𝖓𝖙𝖊𝖓𝖙 𝖑𝖔𝖆𝖉𝖊𝖉
+// ⋆.ೃ࿔*:･ 𝔇𝔞𝔱𝔞 𝔩𝔦𝔪𝔦𝔦𝔱 𝔞 𝔞 𝔞
+async function carregarProdutosPorIds(ids) {
+  try {
+    const response = await fetch("/js/produtos.json");
+    const data = await response.json();
+    
+    return data.produtos.filter(produto => ids.includes(produto.id));
+  } catch (error) {
+    console.error("Erro ao carregar produtos por IDs:", error);
+    return [];
+  }
+}
+
+// ⋆.ೃ࿔*:･ 𝕰𝖛𝖊𝖓𝖙 𝖑𝖎𝖘𝖙𝖊𝖓𝖊𝖗 𝖕𝖆𝖗𝖆 ℭ𝔈ℌ
+function configurarCalculadoraCEP() {
+  const cepInput = document.querySelector('.cep');
+  const cepBotao = document.querySelector('.cep_botao');
+
+  if (cepInput) {
+    // Máscara para CEP
+    cepInput.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length > 5) {
+        value = value.replace(/(\d{5})(\d{1,3})/, '$1-$2');
+      }
+      e.target.value = value;
+    });
+  }
+
+  if (cepBotao) {
+    cepBotao.addEventListener('click', function() {
+      const cep = cepInput.value.replace(/\D/g, '');
+      if (cep.length === 8) {
+        // Simular cálculo de frete
+        alert('Frete calculado! Entrega em 5-7 dias úteis por R$ 15,90');
+      } else {
+        alert('Por favor, digite um CEP válido');
+      }
+    });
+  }
+}
+
+// ⋆.ೃ࿔*:･ 𝕬𝖉𝖎çã𝖔 𝖆𝔬 𝔠𝖆𝖗𝖗𝖎𝖓𝖍𝖔
+function configurarBotaoComprar() {
+  const botaoComprar = document.querySelector('.botao.carrinho');
+  
+  if (botaoComprar) {
+    botaoComprar.addEventListener('click', function() {
+      const corSelecionada = document.querySelector('input[name="cor"]:checked');
+      const tamanhoSelecionado = document.querySelector('input[name="tamanho"]:checked');
+      
+      if (!corSelecionada || !tamanhoSelecionado) {
+        alert('Por favor, selecione a cor e o tamanho do produto.');
+        return;
+      }
+      
+      // Simular adição ao carrinho
+      alert('Produto adicionado ao carrinho!');
+    });
+  }
+}
+
+// ⋆.ೃ࿔*:･ 𝔅𝔬𝔱ã𝔬 𝔡𝔢 𝔣𝔞𝔳𝔬𝔯𝔦𝔱𝔞𝔯
+function configurarBotaoFavoritar() {
+  const botaoFavoritar = document.querySelector('.curti');
+  
+  if (botaoFavoritar) {
+    botaoFavoritar.addEventListener('click', function() {
+      this.classList.toggle('favoritado');
+      
+      if (this.classList.contains('favoritado')) {
+        this.style.backgroundColor = 'var(--cor-secundaria)';
+        this.style.color = 'white';
+        this.style.borderColor = 'var(--cor-secundaria)';
+      } else {
+        this.style.backgroundColor = 'inherit';
+        this.style.color = 'var(--cor-texto2)';
+        this.style.borderColor = 'var(--cor-texto2)';
+      }
+    });
+  }
+}
+
+// ⋆.ೃ࿔*:･ 𝔇𝔬𝔪 𝔠𝔬𝔫𝔱𝔢𝔫𝔱 𝔩𝔬𝔞𝔡𝔢𝔡
 document.addEventListener("DOMContentLoaded", () => {
   const path = window.location.pathname;
 
-  if (path.includes("/pages/category/")) {
+  if (path.includes("/pages/produto.html")) {
+    carregarPaginaProduto();
+    configurarCalculadoraCEP();
+    configurarBotaoComprar();
+    configurarBotaoFavoritar();
+  } else if (path.includes("/pages/category/")) {
     const categoria = path.split("/").pop().replace(".html", "");
     carregarProdutos(categoria);
   } else if (path.includes("/pages/produtos.html")) {

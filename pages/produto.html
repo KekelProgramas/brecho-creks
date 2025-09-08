@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brechó Dos Creks - </title>
+  <title>Brechó Dos Creks - Produto</title>
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" href="/img/brecho_creks.webp">
   <script src="/js/componentes.js"></script>
-
+  <script src="/js/produtos.js"></script>
 </head>
 
 <body>
@@ -17,71 +17,145 @@
   <main class="page_produto_main">
     <div class="page_produto_container">
       <div class="page_produto_img">
-        <img src="products/produto19.webp" alt="Nome do Produto">
+        <img src="" alt="Produto" loading="lazy">
         <section class="produto_descricao">
           <h3>DESCRIÇÃO</h3>
           <div class="produto_desc_conteudo">
-            <p></p>
+            <p>Carregando descrição do produto...</p>
           </div>
         </section>
-
       </div>
 
       <div class="page_produto_info">
-        <h2 class="page_produto_nome">Nome do Produto</h2>
-        <p class="page_produto_id">Codigo: 19</p>
-        <p class="page_produto_preco_promo">R$ 109,99</p>
-        <p class="page_produto_preco">R$ 99,99</p>
-        <p class="page_produto_parcelas">3x de R$ 33,99* sem juros</p>
+        <h2 class="page_produto_nome">Carregando...</h2>
+        <p class="page_produto_id">Codigo: --</p>
+        <p class="page_produto_preco_promo">R$ 0,00</p>
+        <p class="page_produto_preco">R$ 0,00</p>
+        <p class="page_produto_parcelas">3x de R$ 0,00* sem juros</p>
         <p class="page_produto_txt">Cor</p>
 
         <div class="cores_produto">
           <input type="radio" name="cor" id="cor1" checked>
-          <label for="cor1" class="cor" style="--cor:#b0b0b0;" title="Cinza claro"></label>
-
-          <input type="radio" name="cor" id="cor2">
-          <label for="cor2" class="cor" style="--cor:#555555;" title="Cinza escuro"></label>
-
-          <input type="radio" name="cor" id="cor3">
-          <label for="cor3" class="cor" style="--cor:#2c2c2c;" title="Preto"></label>
+          <label for="cor1" class="cor" style="--cor:#b0b0b0;" title="Carregando..."></label>
         </div>
 
         <p class="page_produto_txt">Tamanho</p>
         <div class="page_produtos_tamanho">
-          <input type="radio" name="tamanho" id="tamPP" disabled>
-          <label for="tamPP" class="indisponivel">PP</label>
-
           <input type="radio" name="tamanho" id="tamP" checked>
           <label for="tamP">P</label>
-
-          <input type="radio" name="tamanho" id="tamM" checked>
-          <label for="tamM">M</label>
-
-          <input type="radio" name="tamanho" id="tamG" disabled>
-          <label for="tamG" class="indisponivel">G</label>
-
-          <input type="radio" name="tamanho" id="tamGG" disabled>
-          <label for="tamGG" class="indisponivel">GG</label>
         </div>
+
         <div class="page_produto_txt">Calcular CEP</div>
         <div class="cep_container">
           <input type="text" class="cep" name="cep" placeholder="00000-000" maxlength="9">
           <button class="cep_botao">CALCULAR</button>
         </div>
-        <a href="" class="link_cep">Não sei meu CEP</a>
+        <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank" class="link_cep">Não sei
+          meu CEP</a>
 
         <div class="page_produto_botoes">
-          <button class="curti"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960"
-              width="24px" fill="currentColor">
+          <button class="curti" title="Adicionar aos favoritos">
+            <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="24px"
+              fill="currentColor">
               <path
                 d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
-            </svg></button>
+            </svg>
+          </button>
           <button class="botao carrinho">Comprar</button>
+        </div>
+        <div class="produtos_relacionados" style="margin-top: 2rem; border-top: 1px solid #ddd; padding-top: 1rem;">
+          <h3 style="font-size: 0.9rem; font-weight: bold; margin-bottom: 1rem; letter-spacing: 1px;">VOCÊ TAMBÉM PODE
+            GOSTAR</h3>
+          <div class="produtos_relacionados_lista"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem;">
+          </div>
         </div>
       </div>
     </div>
   </main>
+
   <div id="footer-component"></div>
+
+  <script>
+    async function carregarProdutosRelacionados() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const produtoAtualId = parseInt(urlParams.get('id'));
+
+      try {
+        const response = await fetch('/js/produtos.json');
+        const data = await response.json();
+        const produtoAtual = data.produtos.find(p => p.id === produtoAtualId);
+
+        if (!produtoAtual) return;
+
+        const produtosRelacionados = data.produtos
+          .filter(p => p.categoria === produtoAtual.categoria && p.id !== produtoAtualId && p.valor > 0)
+          .sort(() => 0.5 - Math.random())
+          .slice(0, 4);
+
+        const container = document.querySelector('.produtos_relacionados_lista');
+        if (container && produtosRelacionados.length > 0) {
+          container.innerHTML = produtosRelacionados.map(produto => `
+            <div class="produto_relacionado" onclick="irParaProduto(${produto.id})" style="cursor: pointer; text-align: center;">
+              <img src="${produto.imagem}" alt="${produto.nome}" style="width: 100%; height: 120px; object-fit: cover; border-radius: 5px;">
+              <p style="font-size: 0.8rem; margin: 0.5rem 0; color: var(--cor-texto);">${produto.nome.substring(0, 30)}${produto.nome.length > 30 ? '...' : ''}</p>
+              <p style="font-size: 0.9rem; font-weight: bold; color: var(--cor-secundaria); margin: 0;">${formatarPreco(produto.valor)}</p>
+            </div>
+          `).join('');
+        }
+      } catch (error) {
+        console.error('Erro ao carregar produtos relacionados:', error);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(carregarProdutosRelacionados, 500);
+    });
+
+    function voltarPagina() {
+      if (document.referrer) {
+        window.history.back();
+      } else {
+        window.location.href = '/pages/produtos.html';
+      }
+    }
+
+    // Adicionar botão de voltar (opcional)
+    document.addEventListener('DOMContentLoaded', function () {
+      const container = document.querySelector('.page_produto_container');
+      if (container) {
+        const voltarBtn = document.createElement('button');
+        voltarBtn.innerHTML = '← Voltar';
+        voltarBtn.className = 'botao-voltar';
+        voltarBtn.style.cssText = `
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          background: none;
+          border: 1px solid var(--cor-secundaria);
+          color: var(--cor-secundaria);
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          font-family: var(--fonte-secundaria);
+          transition: var(--transicao);
+        `;
+        voltarBtn.onmouseover = () => {
+          voltarBtn.style.backgroundColor = 'var(--cor-secundaria)';
+          voltarBtn.style.color = 'white';
+        };
+        voltarBtn.onmouseout = () => {
+          voltarBtn.style.backgroundColor = 'transparent';
+          voltarBtn.style.color = 'var(--cor-secundaria)';
+          voltarBtn.style.fontFamily = 'var(--fonte-secundaria)'
+        };
+        voltarBtn.onclick = voltarPagina;
+
+        container.parentElement.style.position = 'relative';
+        container.parentElement.insertBefore(voltarBtn, container);
+      }
+    });
+  </script>
 </body>
 
 </html>
