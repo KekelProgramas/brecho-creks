@@ -5,294 +5,378 @@
       "nome": "Bolsa de Ombro Croché \"Skull Party\"",
       "valor": 57.90,
       "categoria": "acessorios",
-      "imagem": "/products/produto1.webp"
+      "imagem": "/products/produto1.webp",
+      "cores": ["#b0b0b0", "#555555", "#2c2c2c"],
+      "tamanhos": ["tamanho único"]
     },
     {
       "id": 2,
       "nome": "Bolsa de Ombro Croché \"Estrela & Laços\"",
       "valor": 37.50,
       "categoria": "acessorios",
-      "imagem": "/products/produto2.webp"
+      "imagem": "/products/produto2.webp",
+      "cores": ["#ff0000", "#00ff00", "#0000ff"],
+      "tamanhos": ["tamanho único"]
     },
     {
       "id": 3,
       "nome": "Bolsa de Ombro Croché \"Botões",
       "valor": 44.80,
       "categoria": "acessorios",
-      "imagem": "/products/produto3.webp"
+      "imagem": "/products/produto3.webp",
+      "cores": ["#ff69b4", "#8a2be2", "#ffa500"],
+      "tamanhos": ["tamanho único"]
     },
     {
       "id": 4,
       "nome": "Bolsa Croché \"Batman\"",
       "valor": 0,
       "categoria": "acessorios",
-      "imagem": "/products/produto4.webp"
+      "imagem": "/products/produto4.webp",
+      "cores": ["#000000", "#555555", "#777777"],
+      "tamanhos": ["tamanho único"]
     },
     {
       "id": 5,
       "nome": "Baggy Rasgado \"Trash\"",
       "valor": 89.90,
       "categoria": "bottoms",
-      "imagem": "/products/produto5.webp"
+      "imagem": "/products/produto5.webp",
+      "cores": ["#808080", "#000000", "#c0c0c0"],
+      "tamanhos": ["M", "G", "GG"]
     },
     {
       "id": 6,
       "nome": "Boina Jeans \"Caio Gobbi\"",
       "valor": 21.40,
       "categoria": "acessorios",
-      "imagem": "/products/produto6.webp"
+      "imagem": "/products/produto6.webp",
+      "cores": ["#1e90ff", "#ff4500", "#32cd32"],
+      "tamanhos": ["tamanho único"]
     },
     {
       "id": 7,
       "nome": "Touca \"SkBUUUUUUUHll\"",
       "valor": 13.30,
       "categoria": "acessorios",
-      "imagem": "/products/produto7.webp"
+      "imagem": "/products/produto7.webp",
+      "cores": ["#ff1493", "#4b0082", "#00ced1"],
+      "tamanhos": ["tamanho único"]
     },
     {
       "id": 8,
       "nome": "Boxy \"FUCK OFF\"",
       "valor": 37.00,
       "categoria": "tops",
-      "imagem": "/products/produto8.webp"
+      "imagem": "/products/produto8.webp",
+      "cores": ["#ff6347", "#ffd700", "#7fff00"],
+      "tamanhos": ["P", "M", "G"]
     },
     {
       "id": 9,
       "nome": "BB Belt Tradicional",
       "valor": 89.30,
       "categoria": "acessorios",
-      "imagem": "/products/produto9.webp"
+      "imagem": "/products/produto9.webp",
+      "cores": ["#8b0000", "#4b0082", "#2f4f4f"],
+      "tamanhos": ["tamanho único"]
     },
     {
       "id": 10,
       "nome": "Cinto Spike Tradicional",
       "valor": 27.90,
       "categoria": "acessorios",
-      "imagem": "/products/produto10.webp"
+      "imagem": "/products/produto10.webp",
+      "cores": ["#000000", "#ff0000", "#00ff00"],
+      "tamanhos": ["tamanho único"]
     },
     {
       "id": 11,
       "nome": "T-shirt \"Skull\"",
       "valor": 14.80,
       "categoria": "tops",
-      "imagem": "/products/produto11.webp"
+      "imagem": "/products/produto11.webp",
+      "cores": ["#ffffff", "#000000", "#ff1493"],
+      "tamanhos": ["P", "M"]
     },
     {
       "id": 12,
       "nome": "Saia Jeans Preta",
       "valor": 39.80,
       "categoria": "bottoms",
-      "imagem": "/products/produto12.webp"
+      "imagem": "/products/produto12.webp",
+      "cores": ["#000000", "#808080", "#c0c0c0"],
+      "tamanhos": ["P", "M", "G"]
     },
     {
       "id": 13,
       "nome": "T-shirt \"Stay Punk\"",
       "valor": 23.00,
       "categoria": "tops",
-      "imagem": "/products/produto13.webp"
+      "imagem": "/products/produto13.webp",
+      "cores": ["#ff4500", "#00ff7f", "#1e90ff"],
+      "tamanhos": ["PP", "P", "M"]
     },
     {
       "id": 14,
       "nome": "Saia Jeans Babadinhos Levi's",
       "valor": 49.90,
       "categoria": "bottoms",
-      "imagem": "/products/produto14.webp"
+      "imagem": "/products/produto14.webp",
+      "cores": ["#000080", "#800080", "#ff00ff"],
+      "tamanhos": ["P", "M", "G", "GG"]
     },
     {
       "id": 15,
       "nome": "Saia Jeans Caio Gobbi Jeans",
       "valor": 60.50,
       "categoria": "bottoms",
-      "imagem": "/products/produto15.webp"
+      "imagem": "/products/produto15.webp",
+      "cores": ["#00ffff", "#ff1493", "#ffa500"],
+      "tamanhos": ["M", "G", "GG"]
     },
     {
       "id": 16,
       "nome": "Saia Jeans Leve \"Pretty Girl\"",
       "valor": 58.00,
       "categoria": "bottoms",
-      "imagem": "/products/produto16.webp"
+      "imagem": "/products/produto16.webp",
+      "cores": ["#00ff7f", "#ff6347", "#8b4513"],
+      "tamanhos": ["P", "M"]
     },
     {
       "id": 17,
       "nome": "Short Jeans Grunge Light",
       "valor": 22.90,
       "categoria": "bottoms",
-      "imagem": "/products/produto17.webp"
+      "imagem": "/products/produto17.webp",
+      "cores": ["#2e8b57", "#ff69b4", "#4682b4"],
+      "tamanhos": ["P", "M", "G"]
     },
     {
       "id": 18,
       "nome": "Mini Short \"The GOLD\"",
       "valor": 34.80,
       "categoria": "bottoms",
-      "imagem": "/products/produto18.webp"
+      "imagem": "/products/produto18.webp",
+      "cores": ["#ffd700", "#ff8c00", "#daa520"],
+      "tamanhos": ["M", "G", "GG"]
     },
     {
       "id": 19,
       "nome": "Short Jeans \"Skull Girl\"",
       "valor": 67.50,
       "categoria": "bottoms",
-      "imagem": "/products/produto19.webp"
+      "imagem": "/products/produto19.webp",
+      "cores": ["#b0b0b0", "#555555", "#2c2c2c"],
+      "tamanhos": ["P", "M", "G"]
     },
     {
       "id": 20,
       "nome": "Short Jeans Tradicional",
       "valor": 22.90,
       "categoria": "bottoms",
-      "imagem": "/products/produto20.webp"
+      "imagem": "/products/produto20.webp",
+      "cores": ["#808080", "#a9a9a9", "#000000"],
+      "tamanhos": ["P", "M", "G"]
     },
     {
       "id": 21,
       "nome": "Short Jeans \"Church\"",
       "valor": 66.90,
       "categoria": "bottoms",
-      "imagem": "/products/produto21.webp"
+      "imagem": "/products/produto21.webp",
+      "cores": ["#2f4f4f", "#556b2f", "#8b0000"],
+      "tamanhos": ["M", "G", "GG"]
     },
     {
       "id": 22,
       "nome": "Short Jeans Tradicional Preto",
       "valor": 33.90,
       "categoria": "bottoms",
-      "imagem": "/products/produto22.webp"
-    },
-    {
-      "id": 24,
-      "nome": "Bermuda Jeans Lavagem Clara",
-      "valor": 60.70,
-      "categoria": "bottoms",
-      "imagem": "/products/produto24.webp"
+      "imagem": "/products/produto22.webp",
+      "cores": ["#000000", "#333333", "#666666"],
+      "tamanhos": ["P", "M", "G"]
     },
     {
       "id": 23,
       "nome": "Short Jeans \"Monster High\"",
       "valor": 0,
       "categoria": "",
-      "imagem": "/products/produto23.webp"
+      "imagem": "/products/produto23.webp",
+      "cores": ["#ff1493", "#8b008b", "#ff4500"],
+      "tamanhos": ["P", "M", "G"]
+    },
+    {
+      "id": 24,
+      "nome": "Bermuda Jeans Lavagem Clara",
+      "valor": 60.70,
+      "categoria": "bottoms",
+      "imagem": "/products/produto24.webp",
+      "cores": ["#d2b48c", "#deb887", "#a0522d"],
+      "tamanhos": ["M", "G", "GG"]
     },
     {
       "id": 25,
       "nome": "T-shirt gatinho",
       "valor": 12.20,
       "categoria": "tops",
-      "imagem": "/products/produto25.webp"
+      "imagem": "/products/produto25.webp",
+      "cores": ["#ffa07a", "#ff4500", "#00ff7f"],
+      "tamanhos": ["P", "M"]
     },
     {
       "id": 26,
       "nome": "T-shirt \"Brat\"",
       "valor": 16.50,
       "categoria": "tops",
-      "imagem": "/products/produto26.webp"
+      "imagem": "/products/produto26.webp",
+      "cores": ["#ff00ff", "#8a2be2", "#4b0082"],
+      "tamanhos": ["PP", "P", "M"]
     },
     {
       "id": 27,
       "nome": "Conjunto Regata e T-shirt \"Guns n' Roses\"",
       "valor": 30.90,
       "categoria": "tops",
-      "imagem": "/products/produto27.webp"
+      "imagem": "/products/produto27.webp",
+      "cores": ["#ff6347", "#ffd700", "#7fff00"],
+      "tamanhos": ["P", "M", "G"]
     },
     {
       "id": 28,
       "nome": "Top Rendado com Bojo",
       "valor": 18.90,
       "categoria": "tops",
-      "imagem": "/products/produto28.webp"
+      "imagem": "/products/produto28.webp",
+      "cores": ["#ff1493", "#ff69b4", "#8b008b"],
+      "tamanhos": ["PP", "P"]
     },
     {
       "id": 29,
       "nome": "Sueter Maison Margiela \"Trashed\"",
       "valor": 109.0,
       "categoria": "tops",
-      "imagem": "/products/produto29.webp"
+      "imagem": "/products/produto29.webp",
+      "cores": ["#a52a2a", "#5f9ea0", "#d2691e"],
+      "tamanhos": ["M", "G", "GG"]
     },
     {
       "id": 30,
       "nome": "Cropped \"STAAARW\"",
       "valor": 23.00,
       "categoria": "tops",
-      "imagem": "/products/produto30.webp"
+      "imagem": "/products/produto30.webp",
+      "cores": ["#ff6347", "#00ffff", "#ffa500"],
+      "tamanhos": ["P", "M"]
     },
     {
       "id": 31,
       "nome": "Sueter Tradicional",
       "valor": 75.0,
       "categoria": "tops",
-      "imagem": "/products/produto31.webp"
+      "imagem": "/products/produto31.webp",
+      "cores": ["#2e8b57", "#ff4500", "#8b0000"],
+      "tamanhos": ["M", "G", "GG"]
     },
     {
       "id": 32,
       "nome": "Sueter Listrado",
       "valor": 79.90,
       "categoria": "tops",
-      "imagem": "/products/produto32.webp"
+      "imagem": "/products/produto32.webp",
+      "cores": ["#ff1493", "#4b0082", "#00ced1"],
+      "tamanhos": ["P", "M", "G"]
     },
     {
       "id": 33,
       "nome": "Oversized \"I <3 MY GIRLFRIEND\"",
       "valor": 49.90,
       "categoria": "tops",
-      "imagem": "/products/produto33.webp"
+      "imagem": "/products/produto33.webp",
+      "cores": ["#ff6347", "#ffd700", "#7fff00"],
+      "tamanhos": ["P", "M", "G"]
     },
     {
       "id": 34,
       "nome": "T-shirt \"Batman Blue\"",
       "valor": 29.90,
       "categoria": "tops",
-      "imagem": "/products/produto34.webp"
+      "imagem": "/products/produto34.webp",
+      "cores": ["#0000ff", "#1e90ff", "#00bfff"],
+      "tamanhos": ["P", "M"]
     },
     {
       "id": 35,
       "nome": "Sueter Listrado \"Freddy Krueger\"",
       "valor": 90.0,
       "categoria": "tops",
-      "imagem": "/products/produto35.webp"
+      "imagem": "/products/produto35.webp",
+      "cores": ["#8b0000", "#ff4500", "#ff6347"],
+      "tamanhos": ["M", "G", "GG"]
     },
     {
       "id": 36,
       "nome": "Regata Grunge Sex Pistols",
       "valor": 16.70,
       "categoria": "tops",
-      "imagem": "/products/produto36.webp"
+      "imagem": "/products/produto36.webp",
+      "cores": ["#ff1493", "#ff69b4", "#8b008b"],
+      "tamanhos": ["P", "M"]
     },
     {
       "id": 37,
       "nome": "Oversized \"Star Girl\"",
       "valor": 59.90,
       "categoria": "tops",
-      "imagem": "/products/produto37.webp"
+      "imagem": "/products/produto37.webp",
+      "cores": ["#ff6347", "#ffd700", "#7fff00"],
+      "tamanhos": ["P", "M", "G"]
     },
     {
       "id": 38,
       "nome": "T-shirt \"SK8 SKULL\"",
       "valor": 19.90,
       "categoria": "tops",
-      "imagem": "/products/produto38.webp"
+      "imagem": "/products/produto38.webp",
+      "cores": ["#00ffff", "#00ced1", "#20b2aa"],
+      "tamanhos": ["P", "M"]
     },
     {
       "id": 39,
       "nome": "T-shirt \"SK8 CRUZ\"",
       "valor": 19.90,
       "categoria": "tops",
-      "imagem": "/products/produto39.webp"
+      "imagem": "/products/produto39.webp",
+      "cores": ["#ff1493", "#ff69b4", "#8b008b"],
+      "tamanhos": ["P", "M"]
     },
     {
       "id": 40,
       "nome": "Bermuda Jeans Lavagem Escura",
       "valor": 89.90,
       "categoria": "bottoms",
-      "imagem": "/products/produto40.webp"
+      "imagem": "/products/produto40.webp",
+      "cores": ["#2f4f4f", "#556b2f", "#8b0000"],
+      "tamanhos": ["M", "G", "GG"]
     },
     {
       "id": 41,
       "nome": "Baggy Jeans \"Skull Jeans\"",
       "valor": 110.9,
       "categoria": "bottoms",
-      "imagem": "/products/produto41.webp"
+      "imagem": "/products/produto41.webp",
+      "cores": ["#808080", "#000000", "#c0c0c0"],
+      "tamanhos": ["M", "G", "GG"]
     },
     {
       "id": 42,
       "nome": "BB Belt Animal Print Azul",
       "valor": 60.9,
       "categoria": "acessorios",
-      "imagem": "/products/produto42.webp"
+      "imagem": "/products/produto42.webp",
+      "cores": ["#0000ff", "#00ffff", "#1e90ff"],
+      "tamanhos": ["tamanho único"]
     }
   ]
 }

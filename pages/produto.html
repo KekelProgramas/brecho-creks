@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brechó Dos Creks - </title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/img/brecho_creks.webp">
+  <script src="/js/componentes.js"></script>
+
+</head>
+
+<body>
+  <div id="header-component"></div>
+
+  <main class="page_produto_main">
+    <div class="page_produto_container">
+      <div class="page_produto_img">
+        <img src="products/produto19.webp" alt="Nome do Produto">
+        <section class="produto_descricao">
+          <h3>DESCRIÇÃO</h3>
+          <div class="produto_desc_conteudo">
+            <p></p>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="page_produto_info">
+        <h2 class="page_produto_nome">Nome do Produto</h2>
+        <p class="page_produto_id">Codigo: 19</p>
+        <p class="page_produto_preco_promo">R$ 109,99</p>
+        <p class="page_produto_preco">R$ 99,99</p>
+        <p class="page_produto_parcelas">3x de R$ 33,99* sem juros</p>
+        <p class="page_produto_txt">Cor</p>
+
+        <div class="cores_produto">
+          <input type="radio" name="cor" id="cor1" checked>
+          <label for="cor1" class="cor" style="--cor:#b0b0b0;" title="Cinza claro"></label>
+
+          <input type="radio" name="cor" id="cor2">
+          <label for="cor2" class="cor" style="--cor:#555555;" title="Cinza escuro"></label>
+
+          <input type="radio" name="cor" id="cor3">
+          <label for="cor3" class="cor" style="--cor:#2c2c2c;" title="Preto"></label>
+        </div>
+
+        <p class="page_produto_txt">Tamanho</p>
+        <div class="page_produtos_tamanho">
+          <input type="radio" name="tamanho" id="tamPP" disabled>
+          <label for="tamPP" class="indisponivel">PP</label>
+
+          <input type="radio" name="tamanho" id="tamP" checked>
+          <label for="tamP">P</label>
+
+          <input type="radio" name="tamanho" id="tamM" checked>
+          <label for="tamM">M</label>
+
+          <input type="radio" name="tamanho" id="tamG" disabled>
+          <label for="tamG" class="indisponivel">G</label>
+
+          <input type="radio" name="tamanho" id="tamGG" disabled>
+          <label for="tamGG" class="indisponivel">GG</label>
+        </div>
+        <div class="page_produto_txt">Calcular CEP</div>
+        <div class="cep_container">
+          <input type="text" class="cep" name="cep" placeholder="00000-000" maxlength="9">
+          <button class="cep_botao">CALCULAR</button>
+        </div>
+        <a href="" class="link_cep">Não sei meu CEP</a>
+
+        <div class="page_produto_botoes">
+          <button class="curti"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960"
+              width="24px" fill="currentColor">
+              <path
+                d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
+            </svg></button>
+          <button class="botao carrinho">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="footer-component"></div>
+</body>
+
+</html>
